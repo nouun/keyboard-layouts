@@ -156,13 +156,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
 	 * │ BSP │ DEL │  [  │  ]  │ TAB │ ENT │  ←  │  ↓  │  ↑  │  →  │
 	 * └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
-	 *    │     │     │     │  x  │   OTHER   │     │     │     │
+	 *    │  ;  │     │     │  x  │   OTHER   │     │     │     │
 	 *    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
 	 */
 	[MOD1] = LAYOUT(
 		KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
 		KC_BSPC, KC_DEL,  KC_LBRC, KC_RBRC, KC_TAB,  KC_ENT,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
-			XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     MO(OTHER),     XXXXXXX, XXXXXXX, XXXXXXX
+			KC_SCLN, XXXXXXX, XXXXXXX, XXXXXXX,     MO(OTHER),     XXXXXXX, XXXXXXX, XXXXXXX
 	),
 
 	/*

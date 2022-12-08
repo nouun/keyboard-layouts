@@ -23,19 +23,18 @@
 /*
  * Restro Shift
  */
-#define RETRO_SHIFT 300
+#define RETRO_SHIFT 500
 
 // Extend default timeout frot 100ms
-#define AUTO_SHIFT_TIMEOUT 300
+#define AUTO_SHIFT_TIMEOUT 500
 
 // Enable modifiers
 #define AUTO_SHIFT_MODIFIERS
 
-
 /*
  * Home row mods
  */
-#define TAPPING_TERM 300
+#define TAPPING_TERM 150
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
 
