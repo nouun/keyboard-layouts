@@ -1,6 +1,12 @@
 #pragma once
 
 /*
+ * Layout
+ */
+// Options: DVORAK, SEMIMAK, QWERTY
+#define DVORAK
+
+/*
  * Optimizations
  */
 
@@ -20,11 +26,18 @@
 #define RETRO_SHIFT 300
 
 // Extend default timeout frot 100ms
-#define AUTO_SHIFT_TIMEOUT 175
+#define AUTO_SHIFT_TIMEOUT 300
 
 // Enable modifiers
 #define AUTO_SHIFT_MODIFIERS
 
+
+/*
+ * Home row mods
+ */
+#define TAPPING_TERM 300
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
 
 /*
  * Caps Word
