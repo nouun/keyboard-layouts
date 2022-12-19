@@ -3,8 +3,9 @@
 /*
  * Layout
  */
-// Options: DVORAK, SEMIMAK, QWERTY
+#define SEMIMAK
 #define DVORAK
+#define QWERTY
 
 /*
  * Optimizations
