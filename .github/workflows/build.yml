@@ -22,12 +22,12 @@ jobs:
       - name: Upload compiled firmware (build artifact)
         uses: actions/upload-artifact@v2
         with:
-          name: Keychron K6 QMK Firmware
-          path: qmk_firmware/alpha_nouun.bin
+          name: Alpha - nouun QMK Firmware
+          path: qmk_firmware/alpha_nouun.hex
       - name: Upload compiled firmware (tagged release)
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            qmk_firmware/alpha_nouun.bin
+            qmk_firmware/alpha_nouun.hex
 
