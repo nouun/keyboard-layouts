@@ -16,7 +16,7 @@ jobs:
       - name: Install git submodules
         run: cd qmk_firmware && make git-submodule
       - name: Copy custom keymaps
-        run: cp -rp keyboards/alpha/keymaps/nouun qmk_firmware/keyboards/alpha/keymaps
+        run: cp -rp keyboards/alpha/. qmk_firmware/keyboards/alpha/keymaps/nouun
       - name: Compile firmware
         run: cd qmk_firmware && make alpha:nouun
       - name: Upload compiled firmware (build artifact)
