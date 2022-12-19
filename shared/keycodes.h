@@ -31,17 +31,29 @@
 #endif
 
 #ifdef QWERTY
-// Left hand QWERTY
+// Left hand Altered QWERTY
 #define QWRT_A LSFT_T(KC_A)
 #define QWRT_S LCTL_T(KC_S)
 #define QWRT_D LGUI_T(KC_D)
 #define QWRT_F LALT_T(KC_F)
 
-// Right hand QWERTY
+#ifdef SMOL_BOARD
+
+// Right hand Altered QWERTY
 #define QWRT_H RALT_T(KC_H)
 #define QWRT_J RALT_T(KC_J)
 #define QWRT_K RGUI_T(KC_K)
 #define QWRT_L RCTL_T(KC_L)
+
+#else
+
+// Right hand QWERTY
+#define QWRT_J RALT_T(KC_J)
+#define QWRT_K RGUI_T(KC_K)
+#define QWRT_L RCTL_T(KC_L)
+#define QWRT_SCLN RALT_T(KC_SCLN)
+#endif
+
 #endif
 
 /*

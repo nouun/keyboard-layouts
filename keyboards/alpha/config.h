@@ -1,5 +1,7 @@
 #pragma once
 
+#define SMOL_BOARD
+
 /*
  * Layout
  */
@@ -47,6 +49,6 @@
 
 
 /*
- * Comboos
+ * Combos
  */
 #define COMBO_COUNT 2

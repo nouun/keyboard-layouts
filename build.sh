@@ -59,6 +59,7 @@ QMK_DEST="$QMK_HOME/keyboards/$KEYBOARD/keymaps/$LAYOUT/"
 echo " -- Copying new layout"
 mkdir -p "$QMK_DEST"
 cp "./keyboards/$KEYBOARD/"* "$QMK_DEST"
+cp ./shared/* "$QMK_DEST"
 
 # Compile/flash layout
 qmk "$QMK_ARG" -kb "$KEYBOARD" -km "$LAYOUT"
