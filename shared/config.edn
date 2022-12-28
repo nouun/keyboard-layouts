@@ -1,0 +1,16 @@
+{:features
+ {:enabled
+  [:combo
+   :lto]
+  :disabled
+  [:auto-shift
+   :caps-word
+   :console
+   :command
+   :grave-esc
+   :magic
+   :mousekey
+   :music
+   :space-cadet]}
+ :files
+ ["base_keymap.c"]}

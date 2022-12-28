@@ -1,0 +1,30 @@
+(header-raw QMK_KEYBOARD_H)
+(header-local keycodes)
+
+(def u16 (type uint16-t))
+(def key (type keyrecord-t))
+
+
+(comment "Layers")
+
+(def layer-names
+  (enum [-CANARY -SEMIMAK -DVORAK -QWERTY MOD1 MOD2 OTHER]))
+
+
+(comment "Layer switching")
+
+(def custom-keycodes
+  (enum [(LYR-CNR SAFE-RANGE)
+         LYR-SMK
+         LYR-DVK
+         LYR-QTY]))
+
+
+(comment "Handle key presses")
+
+(defn process-layer-switch bool [(code u16) ((ptr record) key)])
+
+
+(comment "Enable Auto-shift for MT keys")
+
+(defn autoshift-homerow bool [(code u16)])

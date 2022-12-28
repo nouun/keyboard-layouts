@@ -15,3 +15,5 @@ MAGIC_ENABLE = no
 MOUSEKEY_ENABLE = no
 MUSIC_ENABLE = no
 SPACE_CADET_ENABLE = no
+
+SRC += base_keymap.c

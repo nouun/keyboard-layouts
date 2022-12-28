@@ -1,0 +1,71 @@
+(comment "Homerow mods")
+
+(comment "Left hand Canary")
+(defines 
+  (CNRY-C (LSFT-T KC-C))
+  (CNRY-R (LCTL-T KC-R))
+  (CNRY-S (LGUI-T KC-S))
+  (CNRY-T (LALT-T KC-T)))
+
+(comment "Right hand Canary")
+(defines
+  (CNRY-N (RALT-T KC-N))
+  (CNRY-E (RGUI-T KC-E))
+  (CNRY-I (RCTL-T KC-I))
+  (CNRY-A (LSFT-T KC-A)))
+
+(comment "Left hand Semimak")
+(defines 
+  (SMMK-S (LSFT-T KC-S))
+  (SMMK-R (LCTL-T KC-R))
+  (SMMK-N (LGUI-T KC-N))
+  (SMMK-T (LALT-T KC-T)))
+
+(comment "Right hand Semimak")
+(defines
+  (SMMK-D (RALT-T KC-D))
+  (SMMK-E (RGUI-T KC-E))
+  (SMMK-A (RCTL-T KC-A))
+  (SMMK-I (LSFT-T KC-I)))
+
+(comment "Left hand Dvorak")
+(defines
+  (DVRK-A (LSFT-T KC-A))
+  (DVRK-O (LCTL-T KC-O))
+  (DVRK-E (LGUI-T KC-E))
+  (DVRK-U (LALT-T KC-U)))
+
+(comment "Right hand Dvorak")
+(defines
+  (DVRK-H (RALT-T KC-H))
+  (DVRK-T (RGUI-T KC-T))
+  (DVRK-N (RCTL-T KC-N))
+  (DVRK-S (LSFT-T KC-S)))
+
+(comment "Left hand QWERTY")
+(defines
+  (QWRT-A (LSFT-T KC-A))
+  (QWRT-S (LCTL-T KC-S))
+  (QWRT-D (LGUI-T KC-D))
+  (QWRT-F (LALT-T KC-F)))
+
+(comment "Right hand QWERTY")
+(ifdef SMOL-BOARD
+  (defines
+    (QWRT-H (RALT-T KC-H))
+    (QWRT-J (RGUI-T KC-J))
+    (QWRT-K (RCTL-T KC-K))
+    (QWRT-L (LSFT-T KC-L)))
+  (defines
+    (QWRT-J (RALT-T KC-J))
+    (QWRT-K (RGUI-T KC-K))
+    (QWRT-L (RCTL-T KC-L))
+    (QWRT-SCLN (LSFT_T KC-SCLN))))
+
+
+(comment "Custom keys")
+
+(defines
+  (MOD-ESC (LT MOD1 KC-ESC))
+  (MOD-SP  (LT MOD2 KC-SPC)))
+  

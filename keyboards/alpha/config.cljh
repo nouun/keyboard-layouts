@@ -1,0 +1,16 @@
+(pragma once)
+
+(header-local base_config)
+
+(define SMOL-BOARD)
+
+(comment "Caps Word")
+
+(defines
+  (CAPS-WORD-IDLE-TIMEOUT 5000)
+  (DOUBLE-TAP-SHIFT-TURNS-ON-CAPS-WORD))
+
+
+(comment "Combos")
+
+(define COMBO-COUNT 2)

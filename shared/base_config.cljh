@@ -1,0 +1,22 @@
+(comment "Optimizations")
+
+(defines
+  (NO-ACTION-ONESHOT)
+  (NO-MUSIC-MODE)
+  (LAYER-STATE-8BIT))
+
+
+;(comment "Retro shift")
+
+;(defines
+;  (RETRO-SHIFT 250)
+;  (AUTO-SHIFT-TIMEOUT 250)
+;  (AUTO-SHIFT-MODIFIERS))
+
+
+(comment "Home row mods")
+
+(defines
+  (TAPPING-TERM 150)
+  (IGNORE-MOD-TAP-INTERRUPT)
+  (TAPPING-FORCE-HOLD))

@@ -1,6 +1,7 @@
 #! /bin/sh
 
 shopt -s dotglob
+
 set -e
 
 usage() {
@@ -60,6 +61,17 @@ echo " -- Copying new layout"
 mkdir -p "$QMK_DEST"
 cp "./keyboards/$KEYBOARD/"* "$QMK_DEST"
 cp ./shared/* "$QMK_DEST"
+
+clj -M -m cljc "$QMK_DEST/keymap.cljc" "$QMK_DEST/keymap.c"
+clj -M -m cljc "$QMK_DEST/base_keymap.cljc" "$QMK_DEST/base_keymap.c"
+clj -M -m cljc "$QMK_DEST/base_keymap.cljh" "$QMK_DEST/base_keymap.h"
+
+clj -M -m cljc "$QMK_DEST/config.cljh" "$QMK_DEST/config.h"
+clj -M -m cljc "$QMK_DEST/base_config.cljh" "$QMK_DEST/base_config.h"
+
+clj -M -m cljc "$QMK_DEST/keycodes.cljh" "$QMK_DEST/keycodes.h"
+
+# Generate rules.mk
 
 # Compile/flash layout
 qmk "$QMK_ARG" -kb "$KEYBOARD" -km "$LAYOUT"

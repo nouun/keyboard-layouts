@@ -1,0 +1,7 @@
+{:keyboard "alpha"
+ :layout "nouun"
+ 
+ :features
+ {:enabled
+  [:mousekey]}}
+  
