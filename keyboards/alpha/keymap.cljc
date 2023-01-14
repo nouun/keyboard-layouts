@@ -134,7 +134,7 @@
      (LAYOUT
        KC-F1   KC-F2   KC-F3   KC-F4   KC-F5   KC-F6   KC-F7   KC-F8   KC-F9   KC-F10
        KC-F11  KC-F12  KC-LBRC KC-RBRC KC-TAB  KC-ENT  KC-LEFT KC-DOWN KC-UP   KC-RGHT
-           KC-SCLN XXXXXXX XXXXXXX XXXXXXX    (MO OTHER)   XXXXXXX XXXXXXX XXXXXXX)
+           KC-SCLN XXXXXXX XXXXXXX (MO OTHER)   XXXXXXX    XXXXXXX XXXXXXX XXXXXXX)
 
      ;  MOD2 Layer
      ; ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
@@ -148,7 +148,7 @@
      (LAYOUT
        KC-1    KC-2    KC-3    KC-4    KC-5    KC-6    KC-7    KC-8    KC-9    KC-0
        KC-MINS KC-EQL  KC-SLSH KC-BSLS KC-GRV  KC-QUOT KC-COMM KC-DOT  KC-BSPC KC-DEL
-           XXXXXXX XXXXXXX XXXXXXX (MO OTHER)   XXXXXXX    XXXXXXX XXXXXXX XXXXXXX)
+           KC-SCLN XXXXXXX XXXXXXX XXXXXXX    (MO OTHER)   XXXXXXX XXXXXXX XXXXXXX)
 
      ;  OTHER Layer
      ; ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
