@@ -16,35 +16,48 @@
 (comment "Combos")
 
 (def combo-events
-  (enum [CMB-EMAIL CMB-TEST COMBO-LENGTH]))
+  (enum [CMB-EMAIL CMB-Q CMB-Z COMBO-LENGTH]))
 
 (def (arr combo-email)
   (const u16 PROGMEM [KC-X KC-J COMBO-END]))
-(def (arr combo-test)
-  (const u16 PROGMEM [KC-X KC-N COMBO-END]))
+
+(def (arr combo-z)
+  (const u16 PROGMEM [KC-C KC-F COMBO-END]))
+(def (arr combo-q)
+  (const u16 PROGMEM [KC-M KC-D COMBO-END]))
 
 (def (arr key-combos COMBO-COUNT)
   (var combo-t {CMB-EMAIL (COMBO-ACTION combo-email)
-                CMB-TEST  (COMBO-ACTION combo-test)}))
+                CMB-Q     (COMBO combo-q KC-Q)
+                CMB-Z     (COMBO combo-z KC-Z)}))
 
 (defn process-combo-event [(combo-index u16) (pressed bool)]
   (case combo-index
     CMB-EMAIL
     (when pressed
-      (SEND-STRING "john.doe@example.com"))
-
-    CMB-TEST
-    (when pressed
-      (tap-code16 KC-END)
-      (tap-code16 (S KC-HOME))
-      (tap-code16 KC-BSPC))))
-
+      (SEND-STRING "john.doe@example.com"))))
 
 (comment "Keymaps")
 
 (def (-> keymaps (arr) (arr MATRIX-ROWS) (arr MATRIX-COLS))
   (const u16 PROGMEM
-    {;  Canary Layer
+    {;  Cabbot Layer
+     ; ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+     ; │  M  │  C  │  D  │  F  │  J  │  K  │  L  │  U  │  O  │  Y  │
+     ; ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+     ; │  R  │  S  │  H  │  T  │  G  │  W  │  N  │  E  │  A  │  I  │
+     ; │ SFT │ CTL │ GUI │ OPT │     │     │ OPT │ GUI │ CTL │ SFT │
+     ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
+     ;    │  B  │  P  │  V  │ ESC │    SPC    │  X  │  ,  │  >  │
+     ;    │     │     │     │ MD1 │    MD2    │     │     │     │
+     ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
+     -CABBOT
+     (LAYOUT
+       KC-M    KC-C    KC-D    KC-F    KC-J    KC-K    KC-L    KC-U    KC-O    KC-Y   
+       CBBT-R  CBBT-S  CBBT-H  CBBT-T  KC-G    KC-W    CBBT-N  CBBT-E  CBBT-A  CBBT-I 
+           KC-B    KC-P    KC-V    MOD-ESC     MOD-SP      KC-X    KC-COMM KC-DOT)
+
+     ;  Canary Layer
      ; ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
      ; │  W  │  L  │  Y  │  P  │  B  │  Z  │  F  │  O  │  U  │  H  │
      ; ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
@@ -141,12 +154,12 @@
      ; ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
      ; │     │     │     │     │     │     │     │     │     │     │
      ; ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-     ; │ CNR │ SMK │ DVK │ QTY │     │     │ HOM │ PG↓ │ PG↑ │ END │
+     ; │ CBT │ CNR │ SMK │ DVK │ QTY │     │ HOM │ PG↓ │ PG↑ │ END │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
      ;    │     │     │     │  x  │     x     │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      OTHER
      (LAYOUT
        XXXXXXX XXXXXXX XXXXXXX XXXXXXX XXXXXXX XXXXXXX XXXXXXX XXXXXXX XXXXXXX XXXXXXX
-       LYR-CNR LYR-SMK LYR-DVK LYR-QTY XXXXXXX XXXXXXX KC-HOME KC-PGDN KC-PGDN KC-END
+       LYR-CBT LYR-CNR LYR-SMK LYR-DVK LYR-QTY XXXXXXX KC-HOME KC-PGDN KC-PGDN KC-END
            XXXXXXX XXXXXXX XXXXXXX XXXXXXX     XXXXXXX     XXXXXXX XXXXXXX XXXXXXX)}))

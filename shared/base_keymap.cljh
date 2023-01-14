@@ -8,13 +8,14 @@
 (comment "Layers")
 
 (def layer-names
-  (enum [-CANARY -SEMIMAK -DVORAK -QWERTY MOD1 MOD2 OTHER]))
+  (enum [-CABBOT -CANARY -SEMIMAK -DVORAK -QWERTY MOD1 MOD2 OTHER]))
 
 
 (comment "Layer switching")
 
 (def custom-keycodes
-  (enum [(LYR-CNR SAFE-RANGE)
+  (enum [(LYR-CBT SAFE-RANGE)
+         LYR-CNR
          LYR-SMK
          LYR-DVK
          LYR-QTY]))

@@ -1,5 +1,19 @@
 (comment "Homerow mods")
 
+(comment "Left hand Cabbot")
+(defines 
+  (CBBT-R (LSFT-T KC-R))
+  (CBBT-S (LCTL-T KC-S))
+  (CBBT-H (LGUI-T KC-H))
+  (CBBT-T (LALT-T KC-T)))
+
+(comment "Right hand Cabbot")
+(defines
+  (CBBT-N (RALT-T KC-N))
+  (CBBT-E (RGUI-T KC-E))
+  (CBBT-A (RCTL-T KC-A))
+  (CBBT-I (LSFT-T KC-I)))
+
 (comment "Left hand Canary")
 (defines 
   (CNRY-C (LSFT-T KC-C))
@@ -66,6 +80,6 @@
 (comment "Custom keys")
 
 (defines
-  (MOD-ESC (LT MOD1 KC-ESC))
-  (MOD-SP  (LT MOD2 KC-SPC)))
+  (MOD-SP  (LT MOD1 KC-SPC))
+  (MOD-ESC (LT MOD2 KC-ESC)))
   

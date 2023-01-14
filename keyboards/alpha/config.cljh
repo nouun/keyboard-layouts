@@ -13,4 +13,4 @@
 
 (comment "Combos")
 
-(define COMBO-COUNT 2)
+(define COMBO-COUNT 3)
