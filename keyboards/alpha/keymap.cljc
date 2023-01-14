@@ -49,7 +49,7 @@
      ; │ SFT │ CTL │ GUI │ OPT │     │     │ OPT │ GUI │ CTL │ SFT │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
      ;    │  B  │  P  │  V  │ ESC │    SPC    │  X  │  ,  │  >  │
-     ;    │     │     │     │ MD1 │    MD2    │     │     │     │
+     ;    │     │     │     │ MD2 │    MD1    │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      -CABBOT
      (LAYOUT
@@ -65,7 +65,7 @@
      ; │ SFT │ CTL │ GUI │ OPT │     │     │ OPT │ GUI │ CTL │ SFT │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
      ;    │  Q  │  J  │  V  │ ESC │    SPC    │  D  │  K  │  X  │
-     ;    │     │     │     │ MD1 │    MD2    │     │     │     │
+     ;    │     │     │     │ MD2 │    MD1    │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      -CANARY
      (LAYOUT
@@ -81,7 +81,7 @@
      ; │ SFT │ CTL │ GUI │ OPT │     │     │ OPT │ GUI │ CTL │ SFT │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
      ;    │  X  │  B  │  M  │ ESC │    SPC    │  J  │  P  │  G  │
-     ;    │     │     │     │ MD1 │    MD2    │     │     │     │
+     ;    │     │     │     │ MD2 │    MD1    │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      -SEMIMAK
      (LAYOUT
@@ -97,7 +97,7 @@
      ; │ SFT │ CTL │ GUI │ OPT │     │     │ OPT │ GUI │ CTL │ SFT │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
      ;    │  X  │  B  │  M  │ ESC │    SPC    │  W  │  V  │  Z  │
-     ;    │     │     │     │ MD1 │    MD2    │     │     │     │
+     ;    │     │     │     │ MD2 │    MD1    │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      -DVORAK
      (LAYOUT
@@ -114,7 +114,7 @@
      ; │ SFT │ CTL │ GUI │ OPT │     │     │ OPT │ GUI │ CTL │ SFT │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
      ;    │  Z  │  X  │  V  │ ESC │    SPC    │  B  │  N  │  M  │
-     ;    │     │     │     │ MD1 │    MD2    │     │     │     │
+     ;    │     │     │     │ MD2 │    MD1    │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      -QWERTY
      (LAYOUT
@@ -124,30 +124,30 @@
 
      ;  MOD1 Layer
      ; ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
-     ; │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │
+     ; │  F1 │  F2 │  F3 │  F4 │  F5 │  F6 │  F7 │  F8 │  F9 │ F10 │
      ; ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-     ; │ BSP │ DEL │  [  │  ]  │ TAB │ ENT │  ←  │  ↓  │  ↑  │  →  │
+     ; │ F11 │ F12 │  [  │  ]  │ TAB │ ENT │  ←  │  ↓  │  ↑  │  →  │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
-     ;    │  ;  │     │     │  x  │   OTHER   │     │     │     │
+     ;    │  ;  │     │     │ OTR │     x     │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      MOD1
      (LAYOUT
-       KC-1    KC-2    KC-3    KC-4    KC-5    KC-6    KC-7    KC-8    KC-9    KC-0
-       KC-BSPC KC-DEL  KC-LBRC KC-RBRC KC-TAB  KC-ENT  KC-LEFT KC-DOWN KC-UP   KC-RGHT
+       KC-F1   KC-F2   KC-F3   KC-F4   KC-F5   KC-F6   KC-F7   KC-F8   KC-F9   KC-F10
+       KC-F11  KC-F12  KC-LBRC KC-RBRC KC-TAB  KC-ENT  KC-LEFT KC-DOWN KC-UP   KC-RGHT
            KC-SCLN XXXXXXX XXXXXXX XXXXXXX    (MO OTHER)   XXXXXXX XXXXXXX XXXXXXX)
 
      ;  MOD2 Layer
      ; ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
-     ; │  F1 │  F2 │  F3 │  F4 │  F5 │  F6 │  F7 │  F8 │  F9 │ F10 │
+     ; │  1  │  2  │  3  │  4  │  5  │  6  │  7  │  8  │  9  │  0  │
      ; ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-     ; │  -  │  =  │  /  │  \  │  `  │  '  │  ,  │  .  │ F11 │ F12 │
+     ; │  -  │  =  │  /  │  \  │  `  │  '  │  ,  │  .  │ BSP │ DEL │
      ; └──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴──┬──┴──┬──┴──┬──┴──┬──┘
-     ;    │     │     │     │ OTR │     x     │     │     │     │
+     ;    │     │     │     │  x  │   OTHER   │     │     │     │
      ;    └─────┴─────┴─────┴─────┴───────────┴─────┴─────┴─────┘
      MOD2
      (LAYOUT
-       KC-F1   KC-F2   KC-F3   KC-F4   KC-F5   KC-F6   KC-F7   KC-F8   KC-F9   KC-F10
-       KC-MINS KC-EQL  KC-SLSH KC-BSLS KC-GRV  KC-QUOT KC-COMM KC-DOT  KC-F11  KC-F12
+       KC-1    KC-2    KC-3    KC-4    KC-5    KC-6    KC-7    KC-8    KC-9    KC-0
+       KC-MINS KC-EQL  KC-SLSH KC-BSLS KC-GRV  KC-QUOT KC-COMM KC-DOT  KC-BSPC KC-DEL
            XXXXXXX XXXXXXX XXXXXXX (MO OTHER)   XXXXXXX    XXXXXXX XXXXXXX XXXXXXX)
 
      ;  OTHER Layer
