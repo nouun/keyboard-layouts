@@ -1,7 +1,7 @@
-(ns cljc
+(ns transpiler.cljc
   (:require [clojure.string :refer [ends-with?]]
-            [transpiler-c :refer [transpile-c]]
-            [transpiler-h :refer [transpile-h]]
+            [transpiler.c :refer [transpile-c]]
+            [transpiler.h :refer [transpile-h]]
             [utils :refer [fmt]]))
 
 (defn transpile [input-file output-file]

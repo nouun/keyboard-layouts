@@ -4,7 +4,7 @@
             [clojure.set :refer [difference union]]
             [clojure.string :as string]
             [conch :refer [programs] :as sh]
-            [cljc :refer [transpile]]
+            [transpiler.cljc :refer [transpile]]
             [utils :refer [fmt]]))
 
 (programs qmk)
@@ -17,7 +17,8 @@
 
 (defn- compile-keymap [config flags]
   (let [p (sh/proc "qmk" (if (:flash flags) "flash" "compile") "-kb" (:keyboard config) "-km" (:layout config))
-        stream (future (sh/stream-to-out p :out))
+        err (future (sh/stream-to-out p :out))
+        out (future (sh/stream-to-out p :err))
         exit-code (sh/exit-code p)]
     (if (zero? exit-code)
       (println "\n   --" (if (:flash flags) "Flashed" "Compiled") "successfully")
@@ -174,8 +175,8 @@
         (println (fmt (str "Keyboard '~A' does not exist. "
                            "Check ./keyboards/ for a list of valid keyboards.")
                       keyboard))
-        ;(try
+       ;(try
         (build keyboard flags)))
+       ; (catch Exception e
+       ;  (println " !!" (.getMessage e))))))
     (shutdown-agents)))
-          ;(catch Exception e
-            ;(println " !!" (.getMessage e))))))))

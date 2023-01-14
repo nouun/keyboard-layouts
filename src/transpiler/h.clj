@@ -1,4 +1,4 @@
-(ns transpiler-h
+(ns transpiler.h
   (:require [clojure.string :as string]
             [utils :as utils :refer [fmt]]))
 
