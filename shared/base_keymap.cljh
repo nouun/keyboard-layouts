@@ -1,5 +1,6 @@
-(header-raw QMK_KEYBOARD_H)
+(header-raw QMK-KEYBOARD-H)
 (header-local keycodes)
+(header-local user-config)
 
 (def u16 (type uint16-t))
 (def key (type keyrecord-t))

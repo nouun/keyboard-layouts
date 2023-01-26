@@ -35,7 +35,7 @@
   (case combo-index
     CMB-EMAIL
     (when pressed
-      (SEND-STRING "john.doe@example.com"))))
+      (SEND-STRING USER-EMAIL))))
 
 (comment "Keymaps")
 
